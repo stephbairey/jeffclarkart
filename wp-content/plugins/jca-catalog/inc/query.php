@@ -13,11 +13,6 @@ add_action( 'pre_get_posts', function ( WP_Query $q ) {
 	if ( $q->is_post_type_archive( 'artwork' ) || $q->is_tax( 'series' ) ) {
 		$q->set( 'posts_per_page', -1 );
 		jca_apply_catalog_order( $q );
-		// Optional ?year=2026 filter on the grid.
-		$year = isset( $_GET['year'] ) ? absint( $_GET['year'] ) : 0;
-		if ( $year ) {
-			$q->set( 'meta_query', array_merge( (array) $q->get( 'meta_query' ), [ [ 'key' => JCA_META . 'year', 'value' => $year, 'compare' => '=', 'type' => 'NUMERIC' ] ] ) );
-		}
 	}
 	if ( $q->is_post_type_archive( 'exhibition' ) ) {
 		$q->set( 'posts_per_page', -1 );
@@ -146,13 +141,3 @@ function jca_group_variants( array $posts ): array {
 	return array_values( $groups );
 }
 
-/** Distinct years present in the catalog, newest first (for the optional year filter). */
-function jca_catalog_years(): array {
-	global $wpdb;
-	$years = $wpdb->get_col( $wpdb->prepare(
-		"SELECT DISTINCT pm.meta_value FROM {$wpdb->postmeta} pm JOIN {$wpdb->posts} p ON p.ID = pm.post_id
-		 WHERE pm.meta_key = %s AND p.post_type = 'artwork' AND p.post_status = 'publish' AND pm.meta_value <> '' ORDER BY pm.meta_value+0 DESC",
-		JCA_META . 'year'
-	) );
-	return array_map( 'intval', $years );
-}
