@@ -56,7 +56,7 @@ Format: `Dxxx — Title` · status · date · context · options · choice · ra
 
 - **Status**: Decided
 - **Date**: 2026-10-08
-- **Choice**: "Contact me about this painting" links to `/contact/?artwork=<id>`; the template resolves the ID to a title server-side and injects it into the Ninja Forms hidden field.
+- **Choice**: "Contact me about this painting" links to `/contact/?inquire=<id>` (`artwork` is the CPT query var and would 404); the template resolves the ID to a title server-side and injects it into the Ninja Forms hidden field.
 - **Rationale** (Steph): titles in query strings mangle commas and apostrophes and allow arbitrary text into the field.
 
 ## D008 — Ninja Forms

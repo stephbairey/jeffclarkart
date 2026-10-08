@@ -117,18 +117,18 @@ function jca_exhibition_history( int $post_id ): array {
 	return array_values( array_filter( $rows, fn( $r ) => is_array( $r ) && array_filter( $r ) ) );
 }
 
-/** Contact URL pre-filled by post ID (resolved server-side on the contact page). */
+/** Contact URL pre-filled by post ID via ?inquire= (resolved server-side on the contact page). */
 function jca_contact_url( int $post_id ): string {
 	$contact = get_page_by_path( 'contact' );
 	$base    = $contact ? get_permalink( $contact ) : home_url( '/contact/' );
-	return add_query_arg( 'artwork', $post_id, $base );
+	return add_query_arg( 'inquire', $post_id, $base );
 }
 
 /**
- * Resolve ?artwork=<id> on the contact page to an artwork title. Empty string for anything invalid.
+ * Resolve ?inquire=<id> on the contact page (not ?artwork=, which is the post type'''s own query var) to an artwork title. Empty string for anything invalid.
  */
 function jca_contact_prefill_title(): string {
-	$id = isset( $_GET['artwork'] ) ? absint( $_GET['artwork'] ) : 0;
+	$id = isset( $_GET['inquire'] ) ? absint( $_GET['inquire'] ) : 0;
 	if ( ! $id ) {
 		return '';
 	}
@@ -140,7 +140,7 @@ function jca_contact_prefill_title(): string {
 }
 
 function jca_contact_prefill_artwork(): ?WP_Post {
-	$id = isset( $_GET['artwork'] ) ? absint( $_GET['artwork'] ) : 0;
+	$id = isset( $_GET['inquire'] ) ? absint( $_GET['inquire'] ) : 0;
 	$post = $id ? get_post( $id ) : null;
 	return ( $post && $post->post_type === 'artwork' && $post->post_status === 'publish' ) ? $post : null;
 }

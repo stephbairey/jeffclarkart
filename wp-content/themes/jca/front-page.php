@@ -27,7 +27,8 @@ foreach ( [ 1, 2, 3 ] as $n ) {
 				if ( $slot === 2 ) {
 					$attr += [ 'loading' => 'eager', 'fetchpriority' => 'high' ];
 				} elseif ( $slot === 1 || $slot === 5 ) {
-					$attr += [ 'loading' => 'eager' ];
+					// Eager but not prioritized; the explicit key stops WP adding its own fetchpriority="high".
+					$attr += [ 'loading' => 'eager', 'fetchpriority' => 'auto' ];
 				}
 				?>
 				<a href="<?php echo esc_url( get_permalink( $p ) ); ?>" aria-label="<?php echo esc_attr( get_the_title( $p ) ); ?>">

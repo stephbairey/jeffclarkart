@@ -1,6 +1,6 @@
 <?php
 /**
- * Ninja Forms integration: pre-fill the hidden "artwork" field from ?artwork=<id> resolved server-side.
+ * Ninja Forms integration: pre-fill the hidden "artwork" field from ?inquire=<id> resolved server-side.
  *
  * In Ninja Forms, give the hidden field the key `artwork` (Field Settings → Admin Label / Field Key).
  * Its default value stays empty; this filter supplies the title when the URL names a real, published artwork.

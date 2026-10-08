@@ -1,5 +1,5 @@
 <?php
-/** /contact/ — inquiry form. ?artwork=<id> pre-fills the hidden field (resolved server-side). */
+/** /contact/ — inquiry form. ?inquire=<id> pre-fills the hidden field (resolved server-side). */
 get_header();
 the_post();
 $artwork = jca_contact_prefill_artwork();
