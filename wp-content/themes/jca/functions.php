@@ -88,12 +88,17 @@ function jca_contact_email(): string {
 function jca_instagram_url(): string {
 	return (string) get_option( 'jca_instagram_url', '' );
 }
+function jca_facebook_url(): string {
+	return (string) get_option( 'jca_facebook_url', '' );
+}
 
 add_action( 'admin_init', function () {
 	register_setting( 'general', 'jca_contact_email', [ 'type' => 'string', 'sanitize_callback' => 'sanitize_email', 'default' => 'jjdclark@gmail.com' ] );
 	register_setting( 'general', 'jca_instagram_url', [ 'type' => 'string', 'sanitize_callback' => 'esc_url_raw', 'default' => '' ] );
+	register_setting( 'general', 'jca_facebook_url', [ 'type' => 'string', 'sanitize_callback' => 'esc_url_raw', 'default' => '' ] );
 	add_settings_field( 'jca_contact_email', 'Public contact email', fn() => printf( '<input type="email" class="regular-text" name="jca_contact_email" value="%s">', esc_attr( jca_contact_email() ) ), 'general' );
 	add_settings_field( 'jca_instagram_url', 'Instagram URL', fn() => printf( '<input type="url" class="regular-text" name="jca_instagram_url" value="%s" placeholder="https://instagram.com/…">', esc_attr( jca_instagram_url() ) ), 'general' );
+	add_settings_field( 'jca_facebook_url', 'Facebook URL', fn() => printf( '<input type="url" class="regular-text" name="jca_facebook_url" value="%s" placeholder="https://facebook.com/…">', esc_attr( jca_facebook_url() ) ), 'general' );
 } );
 
 /* Image markup helpers. */

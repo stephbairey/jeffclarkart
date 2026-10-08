@@ -6,6 +6,9 @@
 		<?php if ( jca_instagram_url() ) : ?>
 			<a href="<?php echo esc_url( jca_instagram_url() ); ?>" target="_blank" rel="noopener">Instagram</a>
 		<?php endif; ?>
+		<?php if ( jca_facebook_url() ) : ?>
+			<a href="<?php echo esc_url( jca_facebook_url() ); ?>" target="_blank" rel="noopener">Facebook</a>
+		<?php endif; ?>
 		<a href="<?php echo esc_url( get_post_type_archive_link( 'exhibition' ) ); ?>">Exhibitions</a>
 		<?php if ( has_nav_menu( 'footer' ) ) : ?>
 			<?php wp_nav_menu( [ 'theme_location' => 'footer', 'container' => false, 'items_wrap' => '%3$s', 'depth' => 1, 'walker' => new JCA_Bare_Walker() ] ); ?>

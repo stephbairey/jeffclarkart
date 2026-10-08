@@ -339,16 +339,17 @@
     },
     {
       "title": "Grasping at Heaven",
-      "year": null,
+      "year": 2026,
       "height_in": 18,
       "width_in": 14,
       "price": null,
       "status": "sold",
       "sold_note": "Private Collection",
       "commissioned": true,
-      "series": [],
-      "file": "JCA - Grasping at Heaven.jpg",
-      "_todo": "year and series from Jeff"
+      "series": [
+        "human-stories"
+      ],
+      "file": "JCA - Grasping at Heaven.jpg"
     }
   ]
 }
