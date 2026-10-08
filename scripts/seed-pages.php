@@ -26,7 +26,7 @@ function jca_seed_page( string $slug, string $title, string $content = '', strin
 
 $home = jca_seed_page( 'home', 'Home' );
 jca_seed_page( 'about', 'About', "<!-- wp:paragraph --><p>Placeholder. Jeff's bio goes here.</p><!-- /wp:paragraph -->", 'page-about.php' );
-jca_seed_page( 'commissions', 'Commissions', "<!-- wp:paragraph --><p>Jeff takes a small number of commissions each year. Tell him what you have in mind: size, subject, where it will hang, and when you'd like it.</p><!-- /wp:paragraph -->", 'page-commissions.php' );
+jca_seed_page( 'commissions', 'Commissions', "<!-- wp:paragraph --><p>Jeff takes a small number of commissions each year. Send a message to get the conversation started.</p><!-- /wp:paragraph -->", 'page-commissions.php' );
 jca_seed_page( 'exhibitions', 'Exhibitions', '' );
 jca_seed_page( 'contact', 'Contact', "<!-- wp:paragraph --><p>Questions about a painting, a studio visit, or anything else: write to Jeff directly.</p><!-- /wp:paragraph -->", 'page-contact.php' );
 

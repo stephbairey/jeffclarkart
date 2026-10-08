@@ -89,12 +89,11 @@ $contact = jca_nf_form( 'Contact', $to, [
 $commissions = jca_nf_form( 'Commissions', $to, [
 	jca_nf_field( 'textbox',  'Name',    'name',    1 ),
 	jca_nf_field( 'email',    'Email',   'email',   2 ),
-	jca_nf_field( 'textbox',  'Size and where it will hang', 'size', 3, [ 'required' => 0 ] ),
-	jca_nf_field( 'textbox',  'Budget and timeline', 'budget', 4, [ 'required' => 0 ] ),
-	jca_nf_field( 'textarea', 'What do you have in mind?', 'message', 5 ),
-	jca_nf_field( 'hp',       'Leave blank', 'hp', 6, [ 'required' => 0 ] ),
-	jca_nf_field( 'submit',   'Send',    'submit',  7, [ 'required' => 0, 'processing_label' => 'Sending' ] ),
-], 'Commission inquiry from {field:name}', "<p><strong>{field:name}</strong> ({field:email})</p><p>Size/placement: {field:size}</p><p>Budget/timeline: {field:budget}</p><p>{field:message}</p>" );
+	jca_nf_field( 'textarea', 'Message', 'message', 3 ),
+	jca_nf_field( 'hp',       'Leave blank', 'hp', 4, [ 'required' => 0 ] ),
+	jca_nf_field( 'submit',   'Send',    'submit',  5, [ 'required' => 0, 'processing_label' => 'Sending' ] ),
+], 'Commission inquiry from {field:name}', "<p><strong>{field:name}</strong> ({field:email})</p><p>{field:message}</p>" );
+// Note: on staging the Commissions page reuses the Contact form (jca_form_commissions = contact form id), per Jeff 2026-10-08.
 
 $which = $args[0] ?? '';
 $defs  = [ 'contact' => $contact, 'commissions' => $commissions ];

@@ -145,16 +145,15 @@
       "year": 2025,
       "height_in": 40,
       "width_in": 30,
-      "price": null,
-      "status": "inquire",
+      "price": 10500,
+      "status": "available",
       "series": [
         "beautiful-oddities"
       ],
       "featured_on_home": true,
       "home_order": 6,
       "featured_order": 3,
-      "file": "JCA 20250624 - Thanks for All the Fish.jpg",
-      "_todo": "price TBD, Jeff asked 2026-10-08"
+      "file": "JCA 20250624 - Thanks for All the Fish.jpg"
     },
     {
       "title": "Salome and the Dance of the Twelve Waiters",
