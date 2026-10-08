@@ -23,7 +23,7 @@ foreach ( [ 1, 2, 3 ] as $n ) {
 		<div class="collage__frame collage__frame--<?php echo $slot; ?>">
 			<?php if ( isset( $collage[ $slot ] ) ) :
 				$p    = $collage[ $slot ];
-				$attr = [ 'sizes' => '(max-width: 759px) 60vw, 25vw' ];
+				$attr = [ 'sizes' => '(max-width: 759px) 70vw, 36vw' ]; // generous: tall frames are filled by height, so the file must be wider than the frame
 				if ( $slot === 2 ) {
 					$attr += [ 'loading' => 'eager', 'fetchpriority' => 'high' ];
 				} elseif ( $slot === 1 || $slot === 5 ) {

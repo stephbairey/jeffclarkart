@@ -1,36 +1,353 @@
 {
   "_notes": "Seed catalog. Dimensions are height x width in inches (PAM order). Prices are Jeff's current numbers as of 2026-10-08 and will be revised via the price sheet. status: available|sold|reserved|inquire. variant_group only on Pop Elegies.",
   "series": [
-    {"slug": "beautiful-oddities", "name": "Beautiful Oddities"},
-    {"slug": "fragmented-identity", "name": "Fragmented Identity"},
-    {"slug": "human-stories", "name": "Human Stories"},
-    {"slug": "pop-elegies", "name": "Pop Elegies: Death of the 80's"}
+    {
+      "slug": "beautiful-oddities",
+      "name": "Beautiful Oddities"
+    },
+    {
+      "slug": "fragmented-identity",
+      "name": "Fragmented Identity"
+    },
+    {
+      "slug": "human-stories",
+      "name": "Human Stories"
+    },
+    {
+      "slug": "pop-elegies",
+      "name": "Pop Elegies: Death of the 80's"
+    }
   ],
   "artworks": [
-    {"title": "Self-Portrait 01: Death of an 80's Pop Icon", "year": 2024, "height_in": 40, "width_in": 30, "price": 10800, "status": "available", "series": ["fragmented-identity"], "featured_on_home": true, "home_order": 1, "file": "JCA 20240117 - Self-Portrait 01 - Death of an 80_s Pop Icon.jpeg"},
-    {"title": "Self-Portrait 02", "year": 2026, "height_in": 36, "width_in": 24, "price": 7800, "status": "available", "series": ["fragmented-identity"], "featured_on_home": true, "home_order": 2, "file": "JCA 20260210 - Self-Portrait 02.jpg"},
-    {"title": "Death of an 80's Pop Icon, Pt. 2: New Wave and Rap Rock - The Mother and Child Reunion", "year": 2026, "height_in": 36, "width_in": 24, "price": 7800, "status": "available", "series": ["fragmented-identity"], "file": "JCA 20260201 - Death of an 80s Pop Icon Pt 2 - New Wave and Rap Rock - the Mother and Child Reunion.jpg"},
-    {"title": "The Embrace", "year": 2023, "height_in": 36, "width_in": 24, "price": 7800, "status": "available", "series": ["human-stories"], "featured_on_home": true, "home_order": 3, "featured_order": 1, "file": "JCA 20230819 - The Embrace.jpg"},
-    {"title": "Happy Birthday, Mr. President", "year": 2026, "height_in": 48, "width_in": 36, "price": 15600, "status": "available", "series": ["human-stories"], "featured_order": 2, "file": "JCA 20260209 - Happy Birthday Mr President.jpg"},
-    {"title": "Paul, Pursued", "year": 2026, "height_in": 30, "width_in": 24, "price": 6500, "status": "available", "series": ["beautiful-oddities"], "file": "JCA 20260210 - Paul, Pursued.jpg"},
-    {"title": "Freud and the Banshees", "year": 2023, "height_in": 35.5, "width_in": 46.5, "price": 14900, "status": "available", "series": ["human-stories"], "featured_on_home": true, "home_order": 4, "file": "JCA 20231213 - Freud and the Banshees.jpg"},
-    {"title": "Every Time Pandora Opens a Gift", "year": 2024, "height_in": 36, "width_in": 24, "price": 7800, "status": "sold", "sold_note": "Private Collection", "series": ["human-stories"], "file": "JCA 20240125 - Every Time Pandora Opens A Gift.jpg"},
-    {"title": "The Enlightened Monk", "year": 2024, "height_in": 35.25, "width_in": 23.5, "price": 7460, "status": "available", "series": ["beautiful-oddities"], "featured_on_home": true, "home_order": 5, "file": "JCA 20240722 - The Enlightened Monk.jpg"},
-    {"title": "Thanks for All the Fish", "year": 2025, "height_in": 40, "width_in": 30, "price": null, "status": "inquire", "series": ["beautiful-oddities"], "featured_on_home": true, "home_order": 6, "featured_order": 3, "file": "JCA 20250624 - Thanks for All the Fish.jpg", "_todo": "price TBD, Jeff asked 2026-10-08"},
-    {"title": "Salome and the Dance of the Twelve Waiters", "year": 2026, "height_in": 48, "width_in": 24, "price": 10400, "status": "available", "series": ["beautiful-oddities"], "featured_on_home": true, "home_order": 7, "file": "JCA 20260215 - Salome and the Dance of the Twelve Waiters.jpg"},
-    {"title": "Argument", "year": 2026, "height_in": 30, "width_in": 24, "price": 6480, "status": "available", "series": ["beautiful-oddities"], "file": "JCA 20260327 - Argument.jpg"},
-    {"title": "Self-Portrait 01 - Variant 01", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 01", "file": "JCA 20260512 Self-Portrait 01 - Variant 01.jpg"},
-    {"title": "Self-Portrait 01 - Variant 02", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 01", "file": "JCA 20260512 Self-Portrait 01 - Variant 02.jpg"},
-    {"title": "Self-Portrait 01 - Variant 03", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 01", "file": "JCA 20260512 Self-Portrait 01 - Variant 03.jpg"},
-    {"title": "Self-Portrait 01 - Variant 04", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 01", "file": "JCA 20260512 Self-Portrait 01 - Variant 04.jpg"},
-    {"title": "Self-Portrait 02 - Variant 01", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 02", "file": "JCA 20260512 Self-Portrait 02 - Variant 01.jpg"},
-    {"title": "Self-Portrait 02 - Variant 02", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 02", "file": "JCA 20260512 Self-Portrait 02 - Variant 02.jpg"},
-    {"title": "Self-Portrait 02 - Variant 03", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 02", "file": "JCA 20260512 Self-Portrait 02 - Variant 03.jpg"},
-    {"title": "Self-Portrait 02 - Variant 04", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 02", "file": "JCA 20260512 Self-Portrait 02 - Variant 04.jpg"},
-    {"title": "Self-Portrait 03 - Variant 01", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 03", "file": "JCA 20260512 Self-Portrait 03 - Variant 01.jpg"},
-    {"title": "Self-Portrait 03 - Variant 02", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 03", "file": "JCA 20260512 Self-Portrait 03 - Variant 02.jpg"},
-    {"title": "Self-Portrait 03 - Variant 03", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 03", "file": "JCA 20260512 Self-Portrait 03 - Variant 03.jpg"},
-    {"title": "Self-Portrait 03 - Variant 04", "year": 2026, "height_in": 20, "width_in": 16, "price": 2900, "status": "available", "series": ["pop-elegies"], "variant_group": "Self-Portrait 03", "file": "JCA 20260512 Self-Portrait 03 - Variant 04.jpg"},
-    {"title": "Portrait of Lisbeth Claus", "year": 2026, "height_in": null, "width_in": null, "price": null, "status": "inquire", "series": [], "file": "JCA 20260630 Portrait of Lisbeth Claus.jpg", "_todo": "not in the Oct 5 inventory; year from filename; size, price, series needed from Jeff"}
+    {
+      "title": "Self-Portrait 01: Death of an 80's Pop Icon",
+      "year": 2024,
+      "height_in": 40,
+      "width_in": 30,
+      "price": 10800,
+      "status": "available",
+      "series": [
+        "fragmented-identity"
+      ],
+      "featured_on_home": true,
+      "home_order": 1,
+      "file": "JCA 20240117 - Self-Portrait 01 - Death of an 80_s Pop Icon.jpeg"
+    },
+    {
+      "title": "Self-Portrait 02",
+      "year": 2026,
+      "height_in": 36,
+      "width_in": 24,
+      "price": 7800,
+      "status": "available",
+      "series": [
+        "fragmented-identity"
+      ],
+      "featured_on_home": true,
+      "home_order": 2,
+      "file": "JCA 20260210 - Self-Portrait 02.jpg"
+    },
+    {
+      "title": "Death of an 80's Pop Icon, Pt. 2: New Wave and Rap Rock - The Mother and Child Reunion",
+      "year": 2026,
+      "height_in": 36,
+      "width_in": 24,
+      "price": 7800,
+      "status": "available",
+      "series": [
+        "fragmented-identity"
+      ],
+      "file": "JCA 20260201 - Death of an 80s Pop Icon Pt 2 - New Wave and Rap Rock - the Mother and Child Reunion.jpg",
+      "featured_on_home": true,
+      "home_order": 4
+    },
+    {
+      "title": "The Embrace",
+      "year": 2023,
+      "height_in": 36,
+      "width_in": 24,
+      "price": 7800,
+      "status": "available",
+      "series": [
+        "human-stories"
+      ],
+      "featured_on_home": true,
+      "home_order": 3,
+      "featured_order": 1,
+      "file": "JCA 20230819 - The Embrace.jpg"
+    },
+    {
+      "title": "Happy Birthday, Mr. President",
+      "year": 2026,
+      "height_in": 48,
+      "width_in": 36,
+      "price": 15600,
+      "status": "available",
+      "series": [
+        "human-stories"
+      ],
+      "featured_order": 2,
+      "file": "JCA 20260209 - Happy Birthday Mr President.jpg"
+    },
+    {
+      "title": "Paul, Pursued",
+      "year": 2026,
+      "height_in": 30,
+      "width_in": 24,
+      "price": 6500,
+      "status": "available",
+      "series": [
+        "beautiful-oddities"
+      ],
+      "file": "JCA 20260210 - Paul, Pursued.jpg"
+    },
+    {
+      "title": "Freud and the Banshees",
+      "year": 2023,
+      "height_in": 35.5,
+      "width_in": 46.5,
+      "price": 14900,
+      "status": "available",
+      "series": [
+        "human-stories"
+      ],
+      "file": "JCA 20231213 - Freud and the Banshees.jpg"
+    },
+    {
+      "title": "Every Time Pandora Opens a Gift",
+      "year": 2024,
+      "height_in": 36,
+      "width_in": 24,
+      "price": 7800,
+      "status": "sold",
+      "sold_note": "Private Collection",
+      "series": [
+        "human-stories"
+      ],
+      "file": "JCA 20240125 - Every Time Pandora Opens A Gift.jpg"
+    },
+    {
+      "title": "The Enlightened Monk",
+      "year": 2024,
+      "height_in": 35.25,
+      "width_in": 23.5,
+      "price": 7460,
+      "status": "available",
+      "series": [
+        "beautiful-oddities"
+      ],
+      "featured_on_home": true,
+      "home_order": 5,
+      "file": "JCA 20240722 - The Enlightened Monk.jpg"
+    },
+    {
+      "title": "Thanks for All the Fish",
+      "year": 2025,
+      "height_in": 40,
+      "width_in": 30,
+      "price": null,
+      "status": "inquire",
+      "series": [
+        "beautiful-oddities"
+      ],
+      "featured_on_home": true,
+      "home_order": 6,
+      "featured_order": 3,
+      "file": "JCA 20250624 - Thanks for All the Fish.jpg",
+      "_todo": "price TBD, Jeff asked 2026-10-08"
+    },
+    {
+      "title": "Salome and the Dance of the Twelve Waiters",
+      "year": 2026,
+      "height_in": 48,
+      "width_in": 24,
+      "price": 10400,
+      "status": "available",
+      "series": [
+        "beautiful-oddities"
+      ],
+      "featured_on_home": true,
+      "home_order": 7,
+      "file": "JCA 20260215 - Salome and the Dance of the Twelve Waiters.jpg"
+    },
+    {
+      "title": "Argument",
+      "year": 2026,
+      "height_in": 30,
+      "width_in": 24,
+      "price": 6480,
+      "status": "available",
+      "series": [
+        "beautiful-oddities"
+      ],
+      "file": "JCA 20260327 - Argument.jpg"
+    },
+    {
+      "title": "Self-Portrait 01 - Variant 01",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 01",
+      "file": "JCA 20260512 Self-Portrait 01 - Variant 01.jpg"
+    },
+    {
+      "title": "Self-Portrait 01 - Variant 02",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 01",
+      "file": "JCA 20260512 Self-Portrait 01 - Variant 02.jpg"
+    },
+    {
+      "title": "Self-Portrait 01 - Variant 03",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 01",
+      "file": "JCA 20260512 Self-Portrait 01 - Variant 03.jpg"
+    },
+    {
+      "title": "Self-Portrait 01 - Variant 04",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 01",
+      "file": "JCA 20260512 Self-Portrait 01 - Variant 04.jpg"
+    },
+    {
+      "title": "Self-Portrait 02 - Variant 01",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 02",
+      "file": "JCA 20260512 Self-Portrait 02 - Variant 01.jpg"
+    },
+    {
+      "title": "Self-Portrait 02 - Variant 02",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 02",
+      "file": "JCA 20260512 Self-Portrait 02 - Variant 02.jpg"
+    },
+    {
+      "title": "Self-Portrait 02 - Variant 03",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 02",
+      "file": "JCA 20260512 Self-Portrait 02 - Variant 03.jpg"
+    },
+    {
+      "title": "Self-Portrait 02 - Variant 04",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 02",
+      "file": "JCA 20260512 Self-Portrait 02 - Variant 04.jpg"
+    },
+    {
+      "title": "Self-Portrait 03 - Variant 01",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 03",
+      "file": "JCA 20260512 Self-Portrait 03 - Variant 01.jpg"
+    },
+    {
+      "title": "Self-Portrait 03 - Variant 02",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 03",
+      "file": "JCA 20260512 Self-Portrait 03 - Variant 02.jpg"
+    },
+    {
+      "title": "Self-Portrait 03 - Variant 03",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 03",
+      "file": "JCA 20260512 Self-Portrait 03 - Variant 03.jpg"
+    },
+    {
+      "title": "Self-Portrait 03 - Variant 04",
+      "year": 2026,
+      "height_in": 20,
+      "width_in": 16,
+      "price": 2900,
+      "status": "available",
+      "series": [
+        "pop-elegies"
+      ],
+      "variant_group": "Self-Portrait 03",
+      "file": "JCA 20260512 Self-Portrait 03 - Variant 04.jpg"
+    },
+    {
+      "title": "Portrait of Lisbeth Claus",
+      "year": 2026,
+      "height_in": null,
+      "width_in": null,
+      "price": null,
+      "status": "inquire",
+      "series": [],
+      "file": "JCA 20260630 Portrait of Lisbeth Claus.jpg",
+      "_todo": "not in the Oct 5 inventory; year from filename; size, price, series needed from Jeff"
+    }
   ]
 }
