@@ -12,6 +12,33 @@ add_action( 'admin_menu', function () {
 	add_management_page( 'Price Sheet', 'Price Sheet', 'manage_options', 'jca-price-sheet', 'jca_price_sheet_page' );
 } );
 
+/** Tools → Price Sheet → "Download current sheet": CSV of every painting, ready to edit and re-upload. */
+add_action( 'admin_post_jca_price_sheet_export', function () {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		wp_die( 'Not allowed.' );
+	}
+	check_admin_referer( 'jca_price_sheet_export' );
+	nocache_headers();
+	header( 'Content-Type: text/csv; charset=utf-8' );
+	header( 'Content-Disposition: attachment; filename="jeffclarkart-prices-' . gmdate( 'Y-m-d' ) . '.csv"' );
+	$out = fopen( 'php://output', 'w' );
+	fputcsv( $out, [ 'title', 'price', 'status', 'year', 'height_in', 'width_in', 'series' ] );
+	foreach ( jca_catalog_ids() as $id ) {
+		$terms = wp_get_object_terms( $id, 'series', [ 'fields' => 'names' ] );
+		fputcsv( $out, [
+			get_post_field( 'post_title', $id, 'raw' ),
+			jca_meta( $id, 'price' ),
+			jca_status( $id ),
+			jca_year( $id ),
+			jca_meta( $id, 'height_in' ),
+			jca_meta( $id, 'width_in' ),
+			is_array( $terms ) ? implode( '; ', $terms ) : '',
+		] );
+	}
+	fclose( $out );
+	exit;
+} );
+
 function jca_normalize_title( string $t ): string {
 	$t = html_entity_decode( $t, ENT_QUOTES | ENT_HTML5, 'UTF-8' );
 	$t = str_replace( [ '’', '‘', '“', '”', '–', '—' ], [ "'", "'", '"', '"', '-', '-' ], $t );
@@ -255,7 +282,8 @@ function jca_price_sheet_page(): void {
 	<div class="wrap">
 		<h1>Price Sheet</h1>
 		<?php echo $notice; // phpcs:ignore ?>
-		<p>Upload a spreadsheet with a <code>title</code> column and a <code>price</code> column (optional <code>status</code>: available, sold, reserved, inquire). Titles are matched to paintings ignoring case, spacing and quote style. Nothing changes until you confirm the preview.</p>
+		<p>Upload a spreadsheet with a <code>title</code> column and a <code>price</code> column (optional <code>status</code>: available, sold, reserved, inquire). Titles are matched to paintings ignoring case, spacing and quote style. Only price and status are changed; other columns are ignored. Nothing changes until you confirm the preview.</p>
+		<p><a class="button" href="<?php echo esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=jca_price_sheet_export' ), 'jca_price_sheet_export' ) ); ?>">Download current sheet (CSV)</a> <span class="description">Open it in Excel or Numbers, change prices or statuses, save as .csv or .xlsx, upload below.</span></p>
 
 		<form method="post" enctype="multipart/form-data" style="margin:1em 0 2em">
 			<?php wp_nonce_field( 'jca_price_sheet_upload' ); ?>
