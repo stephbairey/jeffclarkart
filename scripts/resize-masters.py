@@ -6,7 +6,7 @@ anyway, and shared-host Imagick may run out of memory on the way. So: 3000px
 long edge, sRGB, quality 88, EXIF stripped, filenames preserved.
 
 Usage: resize-masters.py SRC_DIR OUT_DIR [--max 3000]
-Run with the venv at ~/jca-images/.venv (has Pillow).
+Needs Pillow (installed in user site-packages on this machine).
 """
 import argparse
 import sys
