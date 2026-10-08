@@ -120,6 +120,21 @@ function jca_home_featured(): array {
 	return $q->posts;
 }
 
+/** Commissioned works, catalog order. */
+function jca_commissioned_works(): array {
+	$q = new WP_Query( [
+		'post_type'      => 'artwork',
+		'post_status'    => 'publish',
+		'posts_per_page' => -1,
+		'no_found_rows'  => true,
+		'meta_query'     => [ [ 'key' => JCA_META . 'commissioned', 'value' => 'on' ] ],
+	] );
+	$ids   = array_flip( jca_catalog_ids() );
+	$posts = $q->posts;
+	usort( $posts, fn( $a, $b ) => ( $ids[ $a->ID ] ?? PHP_INT_MAX ) <=> ( $ids[ $b->ID ] ?? PHP_INT_MAX ) );
+	return $posts;
+}
+
 /**
  * Group a list of posts by variant_group. Ungrouped posts get key '' and keep catalog order.
  * Returns [ ['heading' => string|'', 'posts' => WP_Post[]], ... ] in first-appearance order.

@@ -34,6 +34,7 @@ add_action( 'cmb2_admin_init', function () {
 	$box->add_field( [ 'id' => $p . 'price', 'name' => 'Price (USD)', 'type' => 'text_small', 'desc' => 'Whole dollars. Leave blank if there is no price yet.', 'attributes' => [ 'type' => 'number', 'step' => '1', 'min' => 0 ], 'sanitization_cb' => 'jca_sanitize_decimal' ] );
 	$box->add_field( [ 'id' => $p . 'status', 'name' => 'Status', 'type' => 'select', 'options' => JCA_STATUSES, 'default' => 'available', 'desc' => 'Available shows the price. Sold shows SOLD. Reserved shows RESERVED. Inquire hides the price.' ] );
 	$box->add_field( [ 'id' => $p . 'sold_note', 'name' => 'Sold note', 'type' => 'text_medium', 'desc' => 'e.g. "Private Collection". Shown after SOLD.' ] );
+	$box->add_field( [ 'id' => $p . 'commissioned', 'name' => 'Commissioned work', 'type' => 'checkbox', 'desc' => 'Tick for pieces made to order. These also appear on the Commissions page as examples.' ] );
 	$box->add_field( [ 'id' => $p . 'inventory_code', 'name' => 'Inventory code', 'type' => 'text_small', 'desc' => 'Optional.' ] );
 	$box->add_field( [ 'id' => $p . 'variant_group', 'name' => 'Variant group', 'type' => 'text_medium', 'desc' => 'For sets of variants (Pop Elegies). Paintings with the same group name are shown together under that heading. Leave blank for standalone works.' ] );
 

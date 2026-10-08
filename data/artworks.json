@@ -339,15 +339,17 @@
       "file": "JCA 20260512 Self-Portrait 03 - Variant 04.jpg"
     },
     {
-      "title": "Portrait of Lisbeth Claus",
-      "year": 2026,
-      "height_in": null,
-      "width_in": null,
+      "title": "Grasping at Heaven",
+      "year": null,
+      "height_in": 18,
+      "width_in": 14,
       "price": null,
-      "status": "inquire",
+      "status": "sold",
+      "sold_note": "Private Collection",
+      "commissioned": true,
       "series": [],
-      "file": "JCA 20260630 Portrait of Lisbeth Claus.jpg",
-      "_todo": "not in the Oct 5 inventory; year from filename; size, price, series needed from Jeff"
+      "file": "JCA - Grasping at Heaven.jpg",
+      "_todo": "year and series from Jeff"
     }
   ]
 }

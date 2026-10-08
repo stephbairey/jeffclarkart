@@ -5,7 +5,8 @@
  * Run on the server from the WP docroot:
  *   ~/bin/wp eval-file /path/to/import-artworks.php /path/to/artworks.json
  *
- * Does not touch featured images (see attach-images.php) or the post body.
+ * Does not touch featured images (see attach-images.php) or the post body. On existing paintings it leaves
+ * price, status and sold note alone (pass --overwrite-prices to force seed values back).
  */
 
 if ( ! defined( 'WP_CLI' ) ) {
@@ -73,6 +74,11 @@ foreach ( $data['artworks'] as $a ) {
 		'home_order'       => $a['home_order'] ?? '',
 		'featured_order'   => $a['featured_order'] ?? '',
 	];
+	// Price, status and sold note are owned by the site once a painting exists (Jeff edits them via the admin
+	// or the price sheet). Seed values apply on create only, unless --overwrite-prices is passed.
+	if ( ! $is_new && ! in_array( '--overwrite-prices', $args, true ) ) {
+		unset( $meta['price'], $meta['status'], $meta['sold_note'] );
+	}
 	foreach ( $meta as $k => $v ) {
 		if ( $v === null || $v === '' ) {
 			delete_post_meta( $id, JCA_META . $k );
@@ -81,10 +87,12 @@ foreach ( $data['artworks'] as $a ) {
 		}
 	}
 	// CMB2 checkbox convention: 'on' or absent.
-	if ( ! empty( $a['featured_on_home'] ) ) {
-		update_post_meta( $id, JCA_META . 'featured_on_home', 'on' );
-	} else {
-		delete_post_meta( $id, JCA_META . 'featured_on_home' );
+	foreach ( [ 'featured_on_home', 'commissioned' ] as $flag ) {
+		if ( ! empty( $a[ $flag ] ) ) {
+			update_post_meta( $id, JCA_META . $flag, 'on' );
+		} else {
+			delete_post_meta( $id, JCA_META . $flag );
+		}
 	}
 	if ( ! empty( $a['exhibition_history'] ) ) {
 		update_post_meta( $id, JCA_META . 'exhibition_history', $a['exhibition_history'] );

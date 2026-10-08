@@ -14,6 +14,7 @@ Log in at **https://jeffclarkart.com/wp-admin/**. Everything about a painting li
    - Price in whole dollars
    - Status: Available, Sold, Reserved, or Inquire (Inquire hides the price)
    - Sold note, if sold (for example "Private Collection")
+   - Commissioned work: tick it for pieces made to order; they show as examples on the Commissions page.
    - Variant group: only for sets like the Pop Elegies. Type the set name ("Self-Portrait 04") and all paintings with that name show together.
 5. **Series** (right column): tick one.
 6. **Homepage** (right column): tick "Show in the homepage collage" and give it a slot number 1–7 if you want it on the front page. "Featured row 1–3" puts it in the three-painting row under your statement.
