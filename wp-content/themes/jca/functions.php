@@ -5,7 +5,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'JCA_THEME_VERSION', '0.1.0' );
+define( 'JCA_THEME_VERSION', '0.2.0' );
 
 require_once get_theme_file_path( 'inc/seo.php' );
 require_once get_theme_file_path( 'inc/forms.php' );
@@ -63,15 +63,19 @@ function jca_header_nav(): void {
 		wp_nav_menu( [ 'theme_location' => 'header', 'container' => false, 'items_wrap' => '<ul>%3$s</ul>', 'depth' => 1 ] );
 		return;
 	}
+	$news  = (int) get_option( 'page_for_posts' );
 	$items = [
 		'Work'        => get_post_type_archive_link( 'artwork' ),
 		'About'       => home_url( '/about/' ),
+		'News'        => $news ? get_permalink( $news ) : '',
 		'Commissions' => home_url( '/commissions/' ),
 		'Contact'     => home_url( '/contact/' ),
 	];
 	echo '<ul>';
-	foreach ( $items as $label => $url ) {
-		$current = untrailingslashit( $url ) === untrailingslashit( jca_current_url() ) || ( $label === 'Work' && ( is_post_type_archive( 'artwork' ) || is_singular( 'artwork' ) || is_tax( 'series' ) ) );
+	foreach ( array_filter( $items ) as $label => $url ) {
+		$current = untrailingslashit( $url ) === untrailingslashit( jca_current_url() )
+			|| ( $label === 'Work' && ( is_post_type_archive( 'artwork' ) || is_singular( 'artwork' ) || is_tax( 'series' ) ) )
+			|| ( $label === 'News' && ( is_home() || is_singular( 'post' ) || is_category() || is_tag() || is_date() ) );
 		echo '<li><a href="' . esc_url( $url ) . '"' . ( $current ? ' aria-current="page"' : '' ) . '>' . esc_html( $label ) . '</a></li>';
 	}
 	echo '</ul>';

@@ -118,5 +118,5 @@ add_filter( 'document_title_separator', fn() => '–' );
 /* Sitemap: keep artworks, series, pages, exhibitions; drop users and tags. */
 add_filter( 'wp_sitemaps_add_provider', fn( $provider, $name ) => $name === 'users' ? false : $provider, 10, 2 );
 add_filter( 'wp_sitemaps_taxonomies', fn( $tax ) => array_intersect_key( $tax, [ 'series' => 1 ] ) );
-add_filter( 'wp_sitemaps_post_types', fn( $types ) => array_intersect_key( $types, [ 'page' => 1, 'artwork' => 1, 'exhibition' => 1 ] ) );
+add_filter( 'wp_sitemaps_post_types', fn( $types ) => array_intersect_key( $types, [ 'page' => 1, 'post' => 1, 'artwork' => 1, 'exhibition' => 1 ] ) );
 add_filter( 'wp_sitemaps_enabled', fn() => ! jca_is_staging() );

@@ -48,6 +48,12 @@ Titles don't have to match capitalization or spacing, but they do have to be the
 
 **Pages → About** (set a photo of yourself with "Set featured image"), **Pages → Commissions**, **Pages → Contact**. Ordinary page text.
 
+## News posts
+
+**Posts → Add New** for studio news, shows, or anything else. Give it a title, write in the editor (paragraphs, headings, images and quotes all work), and set a featured image if you want a picture beside it on the News page. Click **Publish**. The newest post appears first at **News** in the top menu.
+
+There is a sample post there now. Edit it into your first real post or delete it under **Posts → All Posts**.
+
 ## Exhibitions
 
 **Exhibitions → Add New** when you have a show: title, venue, city, dates, a note, a link. The Exhibitions page lists them newest first and says "No exhibitions listed yet" until you add one.

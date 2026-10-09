@@ -237,3 +237,32 @@ a:hover .jca-caption__title { color: var(--accent); }
 
 /* 404 */
 .not-found { padding: clamp(80px, 10cqw, 160px) var(--pad-x); max-width: 62ch; }
+
+/* --------------------------------------------------------------------------
+   News (blog)
+   -------------------------------------------------------------------------- */
+.news { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: clamp(40px, 4cqw, 64px); }
+.news__item { padding-top: 22px; border-top: 1px solid var(--deco); display: grid; grid-template-columns: minmax(0, 62ch) minmax(200px, 1fr); gap: clamp(24px, 3cqw, 48px); align-items: start; }
+@container (max-width: 899px) { .news__item { grid-template-columns: 1fr; } }
+.news__date { display: block; margin-bottom: 10px; }
+.news__title { font-size: clamp(18px, 1.6cqw, 24px); letter-spacing: .06em; text-transform: uppercase; line-height: 1.3; }
+.news__excerpt { margin: 12px 0 0; font-size: clamp(16px, 1.2cqw, 18px); line-height: 1.6; }
+.news__more { display: inline-block; margin-top: 14px; }
+.news__thumb img { width: 100%; height: auto; }
+.post { padding: clamp(32px, 4cqw, 64px) var(--pad-x) clamp(80px, 9cqw, 140px); }
+.post__head { max-width: 62ch; margin-bottom: clamp(24px, 2.6cqw, 40px); }
+.post__title { font-size: clamp(22px, 2.2cqw, 32px); letter-spacing: .06em; text-transform: uppercase; line-height: 1.25; margin-top: 10px; }
+.post__hero { max-width: 62ch; margin-bottom: clamp(24px, 2.6cqw, 40px); }
+.post__hero img { width: 100%; height: auto; }
+.post__body { font-size: clamp(17px, 1.3cqw, 19px); line-height: 1.6; max-width: 62ch; }
+.post__body > * + * { margin-top: 1.2em; }
+.post__body h2 { font-size: 13px; letter-spacing: .24em; text-transform: uppercase; color: var(--link); margin-top: 2em; }
+.post__body h3 { font-size: clamp(17px, 1.4cqw, 20px); letter-spacing: .04em; margin-top: 1.6em; }
+.post__body img, .post__body figure { max-width: 100%; margin-left: 0; margin-right: 0; }
+.post__body figcaption { font-size: 14px; color: var(--text); margin-top: 10px; }
+.post__body blockquote { margin: 1.6em 0; padding: 22px 0 0; border-top: 1px solid var(--deco); font-style: italic; }
+.post__body a { border-bottom: 1px solid var(--accent); }
+.post__nav { display: flex; justify-content: space-between; gap: 24px; margin-top: clamp(40px, 4cqw, 64px); padding-top: 20px; border-top: 1px solid var(--deco); max-width: 62ch; }
+.post__nav a { font-family: var(--font-display); font-weight: 500; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; }
+.pagination { margin-top: clamp(40px, 4cqw, 64px); display: flex; gap: 24px; }
+.pagination a, .pagination span { font-family: var(--font-display); font-weight: 500; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; }

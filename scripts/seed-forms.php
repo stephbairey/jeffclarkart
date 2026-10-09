@@ -71,7 +71,7 @@ function jca_nf_form( string $title, string $to, array $fields, string $subject,
 				'type'    => 'successmessage',
 				'label'   => 'Success Message',
 				'active'  => 1,
-				'message' => "Thanks. Jeff reads every message and will write back to {field:email}.",
+				'message' => "Your message was sent. Jeff reads every message and will write back to {field:email}.",
 			],
 		],
 	];

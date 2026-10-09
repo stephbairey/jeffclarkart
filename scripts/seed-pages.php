@@ -28,11 +28,13 @@ $home = jca_seed_page( 'home', 'Home' );
 jca_seed_page( 'about', 'About', "<!-- wp:paragraph --><p>Placeholder. Jeff's bio goes here.</p><!-- /wp:paragraph -->", 'page-about.php' );
 jca_seed_page( 'commissions', 'Commissions', "<!-- wp:paragraph --><p>Jeff takes a small number of commissions each year. Send a message to get the conversation started.</p><!-- /wp:paragraph -->", 'page-commissions.php' );
 jca_seed_page( 'exhibitions', 'Exhibitions', '' );
+$news = jca_seed_page( 'news', 'News', '' );
 jca_seed_page( 'contact', 'Contact', "<!-- wp:paragraph --><p>Questions about a painting, a studio visit, or anything else: write to Jeff directly.</p><!-- /wp:paragraph -->", 'page-contact.php' );
 
 update_option( 'show_on_front', 'page' );
 update_option( 'page_on_front', $home );
-update_option( 'page_for_posts', 0 );
+update_option( 'page_for_posts', $news );
+update_option( 'posts_per_page', 10 );
 
 // Placeholder statement copy from the design package, flagged as placeholder.
 if ( ! get_post_meta( $home, 'jca_bio', true ) ) {
