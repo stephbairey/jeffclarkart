@@ -16,7 +16,7 @@ if ( ! function_exists( 'Ninja_Forms' ) ) {
 	WP_CLI::error( 'Ninja Forms is not active.' );
 }
 
-$to = get_option( 'jca_contact_email', 'jjdclark@gmail.com' );
+$to = get_option( 'jca_contact_email', 'jeffreyclark.fineart@gmail.com' );
 
 function jca_nf_field( string $type, string $label, string $key, int $order, array $extra = [] ): array {
 	return array_merge( [

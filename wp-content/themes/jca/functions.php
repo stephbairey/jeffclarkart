@@ -83,7 +83,7 @@ function jca_current_url(): string {
 
 /* Site-wide contact details (editable under Settings → General via the options below). */
 function jca_contact_email(): string {
-	return (string) get_option( 'jca_contact_email', 'jjdclark@gmail.com' );
+	return (string) get_option( 'jca_contact_email', 'jeffreyclark.fineart@gmail.com' );
 }
 function jca_instagram_url(): string {
 	return (string) get_option( 'jca_instagram_url', '' );
@@ -93,7 +93,7 @@ function jca_facebook_url(): string {
 }
 
 add_action( 'admin_init', function () {
-	register_setting( 'general', 'jca_contact_email', [ 'type' => 'string', 'sanitize_callback' => 'sanitize_email', 'default' => 'jjdclark@gmail.com' ] );
+	register_setting( 'general', 'jca_contact_email', [ 'type' => 'string', 'sanitize_callback' => 'sanitize_email', 'default' => 'jeffreyclark.fineart@gmail.com' ] );
 	register_setting( 'general', 'jca_instagram_url', [ 'type' => 'string', 'sanitize_callback' => 'esc_url_raw', 'default' => '' ] );
 	register_setting( 'general', 'jca_facebook_url', [ 'type' => 'string', 'sanitize_callback' => 'esc_url_raw', 'default' => '' ] );
 	add_settings_field( 'jca_contact_email', 'Public contact email', fn() => printf( '<input type="email" class="regular-text" name="jca_contact_email" value="%s">', esc_attr( jca_contact_email() ) ), 'general' );

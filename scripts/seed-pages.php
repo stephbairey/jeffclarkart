@@ -51,7 +51,7 @@ update_option( 'blogdescription', 'Original acrylic-on-canvas paintings by Jeff 
 update_option( 'timezone_string', 'America/Los_Angeles' );
 update_option( 'date_format', 'F j, Y' );
 update_option( 'permalink_structure', '/%postname%/' );
-update_option( 'jca_contact_email', 'jjdclark@gmail.com' );
+update_option( 'jca_contact_email', 'jeffreyclark.fineart@gmail.com' );
 update_option( 'big_image_size_threshold', 3000 );
 update_option( 'default_comment_status', 'closed' );
 update_option( 'default_ping_status', 'closed' );
